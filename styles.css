@@ -282,3 +282,52 @@ footer .social-media a:hover {
     list-style-type: circle;
     margin-left: 20px;
 }
+
+/* Articles Grid */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+/* Article Card */
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
