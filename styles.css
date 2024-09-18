@@ -259,3 +259,26 @@ footer .social-media a {
 footer .social-media a:hover {
     color: var(--accent-color);
 }
+
+/* Resume Section Styles */
+#resume .online-resume h3, 
+#resume .online-resume h4 {
+    color: var(--secondary-color);
+    margin-top: 20px;
+}
+
+#resume .online-resume p, 
+#resume .online-resume ul {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+#resume .online-resume ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#resume .online-resume ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
