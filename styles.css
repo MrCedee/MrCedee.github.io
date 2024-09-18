@@ -32,10 +32,6 @@ header h1 {
     margin: 0;
 }
 
-header p {
-    margin: 5px 0 15px;
-}
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -69,14 +65,14 @@ section h2 {
     text-align: center;
 }
 
-/* Cards */
-.cards {
+/* Project Cards */
+.project-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.card {
+.project-card {
     background-color: #fff;
     border: 1px solid #dee2e6;
     border-radius: 5px;
@@ -88,23 +84,23 @@ section h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card img {
+.project-card img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.card h3, .card h4 {
+.project-card h3, .project-card h4 {
     margin-top: 15px;
     color: var(--secondary-color);
 }
 
-.card p {
+.project-card p {
     margin: 10px 0;
     color: var(--text-color);
 }
 
-.card a {
+.project-card a {
     display: inline-block;
     margin-top: 10px;
     color: #fff;
@@ -115,60 +111,94 @@ section h2 {
     font-weight: bold;
 }
 
-.card a:hover {
+.project-card a:hover {
     background-color: var(--accent-color);
 }
 
-/* Horizontal Cards */
-.cards-horizontal {
+/* Articles Grid */
+.articles-grid {
     display: flex;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
-.cards-horizontal .card {
-    width: auto;
-    flex: 0 0 auto;
-    margin-right: 15px;
-}
-
-.cards-horizontal .card:last-child {
-    margin-right: 0;
-}
-
-/* Resume */
-#resume .download-button {
-    display: inline-block;
-    margin-bottom: 20px;
-    color: #fff;
-    background-color: var(--accent-color);
-    padding: 10px 15px;
+.article-card {
+    background-color: #fff;
     border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: calc(33.333% - 20px); /* Three columns */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.article-card img {
+    width: 100%;
+    height: auto;
+}
+
+.article-card h3 {
+    font-size: 1.2em;
+    margin: 15px;
+}
+
+.article-card p {
+    margin: 0 15px 15px;
+    color: #555;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.article-card a {
+    margin: 0 15px 15px;
+    color: #555;
     text-decoration: none;
-    font-weight: bold;
 }
 
-#resume .download-button:hover {
-    background-color: var(--secondary-color);
+.article-card a:hover {
+    text-decoration: underline;
 }
 
-.online-resume h3 {
-    margin-top: 0;
-    color: var(--secondary-color);
+/* Responsive Adjustments */
+/* For Project Cards */
+@media (max-width: 768px) {
+    .project-card {
+        width: 48%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
 }
 
-.online-resume ul {
-    list-style: none;
-    padding-left: 0;
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%;
+    }
 }
 
-.online-resume ul li {
-    margin-bottom: 10px;
-    color: var(--text-color);
+/* For Article Cards */
+@media (max-width: 1024px) {
+    .article-card {
+        width: calc(50% - 20px); /* Two columns */
+    }
 }
 
-.online-resume ul li ul {
-    margin-top: 5px;
-    margin-bottom: 15px;
+@media (max-width: 600px) {
+    .article-card {
+        width: 100%; /* One column */
+    }
 }
 
 /* Footer */
@@ -188,6 +218,11 @@ footer .social-media a {
     color: #fff;
     margin: 0 10px;
     font-size: 24px;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: var(--accent-color);
 }
 
 footer p {
@@ -210,37 +245,6 @@ footer p {
 
 .project-links a:hover {
     background-color: var(--accent-color);
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .card {
-        width: 48%;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    .cards-horizontal {
-        flex-direction: column;
-    }
-
-    .cards-horizontal .card {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: 100%;
-    }
 }
 
 /* Footer Social Media Icons */
@@ -281,68 +285,4 @@ footer .social-media a:hover {
 #resume .online-resume ul ul {
     list-style-type: circle;
     margin-left: 20px;
-}
-
-/* Articles Grid */
-.articles-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-.card {
-    background-color: #fff;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: calc(33.333% - 20px); /* Tres columnas */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-.card h3 {
-    font-size: 1.2em;
-    margin: 15px;
-}
-
-.card p {
-    margin: 0 15px 15px;
-    color: #555;
-    flex-grow: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* Número de líneas a mostrar */
-    -webkit-box-orient: vertical;
-}
-
-.card a {
-    margin: 0 15px 15px;
-    color: #555; /* Cambiado a #555 para que coincida con el texto */
-    text-decoration: none;
-}
-
-.card a:hover {
-    text-decoration: underline;
-}
-
-/* Ajustes Responsivos */
-@media (max-width: 1024px) {
-    .card {
-        width: calc(50% - 20px); /* Dos columnas */
-    }
-}
-
-@media (max-width: 600px) {
-    .card {
-        width: 100%; /* Una columna */
-    }
 }
