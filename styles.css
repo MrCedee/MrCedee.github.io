@@ -296,7 +296,7 @@ footer .social-media a:hover {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: calc(33.333% - 20px); /* For three columns */
+    width: calc(33.333% - 20px); /* Tres columnas */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -317,11 +317,16 @@ footer .social-media a:hover {
     margin: 0 15px 15px;
     color: #555;
     flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Número de líneas a mostrar */
+    -webkit-box-orient: vertical;
 }
 
 .card a {
     margin: 0 15px 15px;
-    color: #007BFF;
+    color: #555; /* Cambiado a #555 para que coincida con el texto */
     text-decoration: none;
 }
 
@@ -329,24 +334,15 @@ footer .social-media a:hover {
     text-decoration: underline;
 }
 
-/* Limit the description text */
-.card p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* Number of lines to show */
-    -webkit-box-orient: vertical;
-}
-
-/* Responsive Adjustments */
+/* Ajustes Responsivos */
 @media (max-width: 1024px) {
     .card {
-        width: calc(50% - 20px); /* Two columns */
+        width: calc(50% - 20px); /* Dos columnas */
     }
 }
 
 @media (max-width: 600px) {
     .card {
-        width: 100%; /* One column */
+        width: 100%; /* Una columna */
     }
 }
