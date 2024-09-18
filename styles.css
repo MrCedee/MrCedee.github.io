@@ -32,6 +32,10 @@ header h1 {
     margin: 0;
 }
 
+header p {
+    margin: 5px 0 15px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -70,18 +74,21 @@ section h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .project-card {
     background-color: #fff;
     border: 1px solid #dee2e6;
     border-radius: 5px;
-    width: 32%;
+    width: calc(33.333% - 20px); /* Three columns */
     margin-bottom: 20px;
     box-sizing: border-box;
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card img {
@@ -98,6 +105,7 @@ section h2 {
 .project-card p {
     margin: 10px 0;
     color: var(--text-color);
+    flex-grow: 1;
 }
 
 .project-card a {
@@ -115,8 +123,8 @@ section h2 {
     background-color: var(--accent-color);
 }
 
-/* Articles Grid */
-.articles-grid {
+/* Article Cards */
+.article-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -167,35 +175,27 @@ section h2 {
 }
 
 /* Responsive Adjustments */
-/* For Project Cards */
-@media (max-width: 768px) {
-    .project-card {
-        width: 48%;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .project-card {
-        width: 100%;
-    }
-}
-
-/* For Article Cards */
+/* For Project and Article Cards */
 @media (max-width: 1024px) {
+    .project-card,
     .article-card {
         width: calc(50% - 20px); /* Two columns */
     }
 }
 
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
 @media (max-width: 600px) {
+    .project-card,
     .article-card {
         width: 100%; /* One column */
     }
