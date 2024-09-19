@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mastering Deep Reinforcement Learning - Marcos Cedenilla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <h1>Marcos Cedenilla</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Details Section -->
+    <section id="project-detail">
+        <div class="container">
+            <h2>Mastering Deep Reinforcement Learning</h2>
+            <img src="images/deep-reinforcement-learning.webp.webp" alt="Mastering Deep Reinforcement Learning">
+            <p><strong>Published on September 4, 2024</strong></p>
+            <div class="project-description">
+                <!-- Detailed project description -->
+                <p>This project explores deep reinforcement learning methods, specifically the Actor-Critic and Deep Deterministic Policy Gradient (DDPG) algorithms, with the aim of solving continuous action space problems like the complex hardcore BipedalWalker-v3 environment.</p>
+
+                <h3>Introduction</h3>
+                <p>Reinforcement learning (RL) has gained significant attention in recent years, particularly with its applications in robotics, gaming, and autonomous systems. In this project, I explored deep reinforcement learning methods, specifically the Actor-Critic and Deep Deterministic Policy Gradient (DDPG) algorithms. My primary goal was to apply these methods to solve continuous action space problems, with a focus on solving the complex problem of hardcore BipedalWalker-v3.</p>
+
+                <h3>Background</h3>
+                <p>Classic reinforcement learning algorithms, such as Q-learning, work well in discrete action spaces but struggle in continuous ones, as those available in the Reinforcement learning framework Gymnasium, OpenAI. To overcome this, alternative methods like Actor-Critic and DDPG were tested.</p>
+
+                <h3>Actor-Critic</h3>
+                <p>Although the Actor-Critic method is typically used for discrete action spaces, it can be adapted to continuous spaces. This method relies on having a network that predicts which action to take (actor) and a network that estimates the value of the current state (critic). For continuous action spaces, the actor outputs values to define normal probability distributions, from which the continuous action vector is sampled.</p>
+
+                <h3>Models</h3>
+                <p>The model was built using Keras, with adaptations to fit continuous action spaces. The actor outputs values that define the parameters of the action distribution, and the critic outputs the value of the state.</p>
+
+                <h3>Training</h3>
+                <p>The training process involved running the model until it solved the problem, using a combination of reward calculation, backpropagation, and gradient optimization techniques. The goal was to maximize the rewards over time by adjusting the model’s parameters.</p>
+
+                <h3>Challenges and Results</h3>
+                <p>Despite extensive efforts, the implementation did not successfully solve the standard BipedalWalker environment. This led to further testing with simpler environments like Pendulum. Adjustments to the Actor-Critic method highlighted the difficulties in adapting to continuous action spaces.</p>
+
+                <h3>Deep-Deterministic Double Policy Gradient Descent (DDPG)</h3>
+                <p>The DDPG method was tested as an alternative, employing two networks: an actor to determine actions and a critic to evaluate those actions. The implementation adapted Keras-based models designed for simpler environments and modified them to fit BipedalWalker.</p>
+
+                <h3>Training Process</h3>
+                <p>The training involved setting up the actor and critic models, implementing noise for action exploration, and running a series of episodes to refine the policy. Key parameters such as learning rates, discount factors, and noise adjustments were optimized to improve performance.</p>
+
+                <h3>Conclusion and Future Work</h3>
+                <p>Although the project did not succeed in fully training the BipedalWalker environment, it provided valuable insights into deep Q-learning and continuous action spaces. The experience highlighted areas for future exploration, such as advanced algorithms like Proximal Policy Optimization (PPO) and refining genetic algorithms for complex benchmarks.</p>
+            </div>
+            <!-- Project Links -->
+            <div class="project-links">
+                <a href="https://github.com/MrCedee/DeepQ-Learning" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Related Articles Section -->
+            <h3>Related Articles</h3>
+            <div class="related-articles">
+                <!-- Article Card 1 -->
+                <div class="card article-card">
+                    <img src="images/deep-reinforcement-learning.webp.webp" alt="[Article Title 1]">
+                    <h4>Mastering Deep Reinforcement Learning: Teaching a Robot to Walk</h4>
+                    <p>Published on September 4, 2024</p>
+                    <a href="https://medium.com/@marcoscedenillabonet/mastering-deep-reinforcement-learning-teaching-a-robot-to-walk-138682d404dd" target="_blank">Read on Medium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="https://github.com/MrCedee" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marcos-cedenilla-bonet-0a99321b2/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://medium.com/@marcoscedenillabonet" target="_blank"><i class="fab fa-medium"></i></a>
+                <a href="mailto:marcoscedenillabonet@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2023 Marcos Cedenilla. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
