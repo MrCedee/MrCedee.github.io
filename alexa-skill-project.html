@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creating an Alexa Skill to Fetch Movie Information from IMDB - Marcos Cedenilla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <h1>Marcos Cedenilla</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Details Section -->
+    <section id="project-detail">
+        <div class="container">
+            <h2>Creating an Alexa Skill to Fetch Movie Information from IMDB</h2>
+            <img src="images/alexa-skill.webp" alt="Creating an Alexa Skill">
+            <p><strong>Published on August 30, 2024</strong></p>
+            <div class="project-description">
+                <p>The project involves developing an Alexa Skill that allows users to retrieve movie information directly from IMDB using voice commands. This project integrates various technologies and methodologies to create an interactive experience with movie data via Alexa, showcasing how combining popular services with voice technology can enhance accessibility and information interaction.</p>
+                <h3>Project Objective</h3>
+                <p>The main objective of the project is to develop an Alexa Skill that can access and retrieve movie information from IMDB when requested by the user. Users can ask for details such as rating, release date, duration, director, synopsis, and similar movies. This project serves as a proof of concept to demonstrate the feasibility of voice assistant applications combined with popular databases like IMDB, utilizing web scraping techniques to extract relevant data.</p>
+                <h3>Project Architecture</h3>
+                <p>To achieve this objective, the project utilizes an architecture based on several key tools and technologies:</p>
+                <ul>
+                    <li><strong>Alexa Developer Console:</strong> The platform used to create and manage the Skill. It is where the intents and invocation phrases are configured, enabling Alexa to understand user requests.</li>
+                    <li><strong>Python:</strong> Used as the backend technology to handle the Skill's logic. The backend code processes user requests, retrieves the relevant data from IMDB, and returns the appropriate response.</li>
+                    <li><strong>IMDB.com:</strong> The main source of movie information. The system uses web scraping techniques to extract specific data from the IMDB website.</li>
+                    <li><strong>AWS Lambda:</strong> An AWS service that hosts the backend of the Skill. AWS Lambda allows code to run in response to events and automatically manages the necessary resources, making it ideal for Alexa Skill development.</li>
+                </ul>
+                <h3>Development of the Alexa Skill</h3>
+                <h4>Initial Setup:</h4>
+                <ul>
+                    <li>A new Skill called “info films” was created in the Alexa Developer Console, where basic intents and invocation phrases were set up.</li>
+                    <li>Custom intents were added, such as <em>ScoreIntent</em>, <em>DirectorIntent</em>, <em>DurationIntent</em>, <em>SynopsisIntent</em>, and <em>SimilarFilmsIntent</em>, each designed to retrieve specific information about the movies.</li>
+                </ul>
+                <h4>Language Modeling:</h4>
+                <ul>
+                    <li>Intents and slots were configured to handle user requests. Slots are input variables that allow users to specify information, such as the movie title, in their requests.</li>
+                </ul>
+                <h4>Backend and Endpoint Development:</h4>
+                <ul>
+                    <li>AWS Lambda was chosen as the endpoint to connect the Skill with the backend.</li>
+                    <li>The backend code, written in Python, receives user requests, processes them by scraping data from IMDB, and sends the appropriate response back to Alexa.</li>
+                </ul>
+                <h3>Implementation Details</h3>
+                <p>The project includes the development of various handlers in the backend code to manage different intents. For example:</p>
+                <ul>
+                    <li><strong>ScoreIntent:</strong> Retrieves the rating and number of votes for a movie.</li>
+                    <li><strong>DirectorIntent:</strong> Provides information about the director(s) of a specified movie.</li>
+                    <li><strong>DurationIntent:</strong> Gives the runtime or duration of a movie.</li>
+                    <li><strong>SynopsisIntent:</strong> Returns a brief summary of the movie.</li>
+                    <li><strong>SimilarFilmsIntent:</strong> Offers recommendations for films similar to the specified movie.</li>
+                </ul>
+                <h3>Web Scraping and Data Handling</h3>
+                <p>The data extraction from IMDB is performed using Python's web scraping techniques. The system searches for movie information based on the user's request and retrieves relevant details like titles, ratings, directors, and similar films. A caching mechanism is also implemented to store previously searched data, optimizing the process by reducing redundant web requests.</p>
+                <h3>Conclusion</h3>
+                <p>This project demonstrates the potential of integrating popular web services with voice technology through the development of an Alexa Skill. It highlights how voice assistants can be used to create more intuitive and accessible ways for users to interact with data. The methodologies used in this project can be applied to develop more complex and innovative Alexa Skills in the future.</p>
+            </div>
+            <!-- Project Links -->
+            <div class="project-links">
+                <a href="https://medium.com/@marcoscedenillabonet/creating-an-alexa-skill-to-fetch-movie-information-from-imdb-c1954fe8af13" target="_blank">Read Article on Medium</a>
+                <a href="https://github.com/MrCedee/IMDB" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-media">
+                <a href="https://github.com/MrCedee" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marcos-cedenilla-bonet-0a99321b2/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://medium.com/@marcoscedenillabonet" target="_blank"><i class="fab fa-medium"></i></a>
+                <a href="mailto:marcoscedenillabonet@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2023 Marcos Cedenilla. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
