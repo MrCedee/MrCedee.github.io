@@ -36,11 +36,44 @@
             <p><strong>Published on September 11, 2024</strong></p>
             <div class="project-description">
                 <!-- Detailed project description -->
-                <p>[Project Description]</p>
-                <!-- Additional sections as needed -->
+                <p>This project focuses on creating a robust system for analyzing and storing scientific articles using Digital Object Identifiers (DOIs). The architecture is designed to process and manage large volumes of scientific data efficiently, using modern data science tools and non-relational databases to automate the extraction, analysis, and storage of relevant information from each article. The system addresses the challenges researchers face when dealing with complex and voluminous datasets, enhancing the research workflow and data accessibility.</p>
+
                 <h3>Introduction</h3>
-                <p>[Introduction content]</p>
-                <!-- ... other sections ... -->
+                <p>The project aims to develop an infrastructure that can handle the processing and storage of scientific articles sourced from text files containing DOIs. By leveraging technologies like MongoDB, Neo4j, and Apache Spark, the system is built to be scalable, flexible, and capable of executing complex data processing tasks. This approach not only simplifies the management of large-scale scientific data but also enhances the efficiency and scalability of research data management.</p>
+
+                <h3>Objective</h3>
+                <p>The primary objective of the project is to create an end-to-end system that can efficiently process scientific articles, extract valuable information, and store it in an organized manner for further analysis. The project seeks to automate the workflow involved in research data management, reduce manual intervention, and ensure data consistency and accessibility.</p>
+
+                <h3>Key Components</h3>
+                <ul>
+                    <li><strong>Data Extraction:</strong> The system extracts metadata and content from scientific articles using DOIs, automating the retrieval of relevant data points such as authors, publication dates, and keywords.</li>
+                    <li><strong>Data Storage:</strong> MongoDB is used as the primary database to store article data in JSON format, allowing for flexible and scalable data management. Neo4j complements this by mapping the relationships between articles and authors, providing a graph-based view of collaborations and connections.</li>
+                    <li><strong>Data Processing:</strong> Apache Spark is employed for data processing, enabling in-memory computation of large datasets and allowing for advanced data analysis without creating intermediate files. The Spark cluster is simulated on an HDFS environment to ensure robustness and scalability.</li>
+                    <li><strong>Distributed Environment:</strong> The system is deployed using Docker and Docker Compose, creating a simulated distributed environment that replicates large-scale infrastructure. This setup includes multiple nodes for MongoDB, Neo4j, and Spark, enhancing the system’s ability to handle high volumes of data.</li>
+                </ul>
+
+                <h3>Functionalities</h3>
+                <ul>
+                    <li><strong>Automated Data Retrieval:</strong> Automatically retrieves and processes scientific articles using DOIs, extracting relevant information for storage and analysis.</li>
+                    <li><strong>Advanced Query Capabilities:</strong> Supports both simple and complex queries, including searching for articles by keywords, finding collaborations between authors, and exploring the relationships between articles.</li>
+                    <li><strong>Data Generation:</strong> Generates static and dynamic data outputs in the form of CSV files, which include key article information and keyword frequency analysis, facilitating further data visualization and exploration.</li>
+                </ul>
+
+                <h3>Deployment and Scalability</h3>
+                <p>The project is deployed using Docker Compose, which orchestrates the components into a cohesive, distributed environment. The use of containerization ensures that the system is scalable and can be easily replicated or modified. Each service, including MongoDB, Neo4j, and Spark, operates independently but integrates seamlessly to provide a unified data processing and storage solution.</p>
+
+                <h3>Project Outcomes</h3>
+                <p>The project successfully establishes a scalable and efficient architecture for managing scientific article data. It automates the workflow from data retrieval to storage and analysis, enhancing research capabilities and enabling more effective data management. The flexible architecture allows for future expansions, such as the integration of machine learning models for predictive analysis or the development of interactive data visualization tools.</p>
+
+                <h3>Future Enhancements</h3>
+                <ul>
+                    <li><strong>Integration with Machine Learning:</strong> Incorporate predictive models to analyze patterns in scientific research and author collaborations.</li>
+                    <li><strong>Enhanced Data Visualization:</strong> Develop tools to visualize complex relationships and trends within the data, making it more accessible and useful for researchers.</li>
+                    <li><strong>Scalability Improvements:</strong> Further optimize the system’s performance to handle larger datasets and more complex queries as research needs evolve.</li>
+                </ul>
+
+                <p>This project lays a strong foundation for advanced data management in scientific research, addressing critical challenges in processing, analyzing, and storing large volumes of data. By continuing to refine and expand the system, it aims to become a powerful tool for researchers seeking to streamline their workflow and gain deeper insights into their fields of study.</p>
+
             </div>
             <!-- Project Links -->
             <div class="project-links">
