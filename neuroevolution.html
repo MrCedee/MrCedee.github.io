@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neuroevolution - Marcos Cedenilla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <h1>Marcos Cedenilla</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Details Section -->
+    <section id="project-detail">
+        <div class="container">
+            <h2>Neuroevolution</h2>
+            <img src="images/neuroevolution.webp" alt="Neuroevolution">
+            <p><strong>Published on September 5, 2024</strong></p>
+            <div class="project-description">
+                <!-- Detailed project description -->
+                <p>This project explores the use of neuroevolution techniques to solve complex reinforcement learning environments such as Lunar Lander and Bipedal Walker. These environments pose significant challenges due to their continuous action spaces, making neuroevolution a promising alternative to traditional Deep Q-Learning methods.</p>
+
+                <h3>Introduction</h3>
+                <p>Reinforcement learning (RL) has gained significant attention in recent years, particularly with its applications in robotics, gaming, and autonomous systems. In this project, I explored deep reinforcement learning methods, specifically the Actor-Critic and Deep Deterministic Policy Gradient (DDPG) algorithms. My primary goal was to apply these methods to solve continuous action space problems, with a focus on solving the complex problem of hardcore BipedalWalker-v3.</p>
+
+                <h3>What is Neuroevolution?</h3>
+                <p>Neuroevolution involves training neural networks using evolutionary algorithms instead of gradient-based optimization. By evolving a population of networks over generations and applying genetic operators like mutation and crossover, the goal is to optimize performance in challenging environments. The performance is measured by a fitness function, which is typically the cumulative reward obtained in the environment.</p>
+
+                <h3>Why Neuroevolution?</h3>
+                <p>For complex environments like Lunar Lander and Bipedal Walker, neuroevolution offers advantages over traditional methods by promoting diverse exploration and improving generalization. Despite extensive efforts using Q-Learning and other Deep Q-Learning techniques, such as Actor-Critic and DDPG, the benchmarks were not met. Neuroevolution provided a simpler yet effective alternative that successfully overcame these challenges.</p>
+
+                <h3>Part 1: Lunar Lander with Neuroevolution</h3>
+                <p>Before tackling the more complex Bipedal Walker environment, I tested neuroevolution in the Lunar Lander environment, which, while still having a continuous observation space, operates in a discrete action space. This simpler scenario allowed for experimentation and refinement of the neuroevolution approach.</p>
+
+                <h3>Key Features of Lunar Lander</h3>
+                <p>The Lunar Lander environment simulates the landing of a spacecraft, where the primary goal is to control the spacecraft’s thrusters to achieve a safe landing without crashing. It involves only four control actions: up, left, right, and down, making it an ideal testing ground for neuroevolution.</p>
+
+                <h3>Neural Network Adapted to Neuroevolution</h3>
+                <p>To adjust to neuroevolution requirements, the neural network framework was modified to include methods that create a network with specific weights derived from chromosomes, which are encoded representations of the network's weights and biases.</p>
+
+                <h3>Training Function and Fitness Evaluation</h3>
+                <p>The training process involves creating a population of random individuals, evolving them over generations, and evaluating their performance using a fitness function. The fitness function measures cumulative rewards, guiding the selection of individuals for reproduction. Elitism ensures that the highest-performing individuals are preserved across generations.</p>
+
+                <h3>Execution Examples for Lunar Lander</h3>
+                <p>In 1,000 test iterations, the neuroevolution approach achieved a win rate of 98.10%, demonstrating the effectiveness of this method in conquering the Lunar Lander environment.</p>
+
+                <h3>Part 2: Bipedal Walker with Neuroevolution</h3>
+                <p>Building on the success with Lunar Lander, I applied neuroevolution to the more complex Bipedal Walker environment. This environment tests algorithms that control a two-legged robot, challenging them to maintain balance and walk across flat terrain.</p>
+
+                <h3>Key Features of Bipedal Walker</h3>
+                <p>The Bipedal Walker environment features a continuous action space, observation space, and a reward function that encourages effective walking while penalizing falls and excessive energy use. The objective is to develop a control policy that enables the robot to walk as far as possible without falling.</p>
+
+                <h3>Challenges and Future Directions</h3>
+                <p>While neuroevolution was successful in standard Bipedal Walker scenarios, it struggled with the hardcore mode due to the exponential increase in chromosome size and complexity. Future work will explore maintaining successful architectures or retraining in more complex environments.</p>
+
+                <h3>Conclusion</h3>
+                <p>Neuroevolution proved to be a powerful tool in tackling the challenges posed by Lunar Lander and Bipedal Walker. By evolving neural networks through genetic algorithms, previously unattainable results were achieved. This approach opens up new possibilities for solving complex problems in continuous action spaces, providing a strong foundation for further exploration and refinement.</p>
+            </div>
+            <!-- Project Links -->
+            <div class="project-links">
+                <a href="https://github.com/MrCedee/Neuroevolution" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Related Articles Section -->
+            <h3>Related Articles</h3>
+            <div class="related-articles">
+                <!-- Article Card 1 -->
+                <div class="card article-card">
+                    <img src="images/neuroevolution.webp" alt="Beating Lunar Lander and Bipedal Walker with Neuroevolution">
+                    <h4>Beating Lunar Lander and Bipedal Walker with Neuroevolution</h4>
+                    <p>Published on September 5, 2024</p>
+                    <a href="https://medium.com/@marcoscedenillabonet/beating-lunar-lander-and-bipedal-walker-with-neuroevolution-2e96270e5447" target="_blank">Read on Medium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="https://github.com/MrCedee" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marcos-cedenilla-bonet-0a99321b2/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://medium.com/@marcoscedenillabonet" target="_blank"><i class="fab fa-medium"></i></a>
+                <a href="mailto:marcoscedenillabonet@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2023 Marcos Cedenilla. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
