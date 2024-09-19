@@ -274,3 +274,19 @@ footer p {
     list-style-type: circle;
     margin-left: 20px;
 }
+
+/* Botón de descarga */
+.download-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: var(--accent-color); /* Rojo de tu paleta */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.download-button:hover {
+    background-color: var(--secondary-color); /* Cambia a azul al pasar el cursor */
+}
