@@ -362,3 +362,60 @@ footer p {
 .cards-horizontal .card a:hover {
     background-color: var(--accent-color);
 }
+
+
+/* Estilos para la sección de artículos relacionados */
+.related-articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.related-articles .article-card {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: calc(50% - 20px); /* Dos columnas */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.related-articles .article-card img {
+    width: 100%;
+    height: auto;
+}
+
+.related-articles .article-card h4 {
+    font-size: 1.1em;
+    margin: 15px;
+}
+
+.related-articles .article-card p {
+    margin: 0 15px 15px;
+    color: #555;
+}
+
+.related-articles .article-card a {
+    display: inline-block;
+    margin: 0 15px 15px;
+    color: #fff;
+    background-color: var(--secondary-color);
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.related-articles .article-card a:hover {
+    background-color: var(--accent-color);
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    .related-articles .article-card {
+        width: 100%; /* Una columna en pantallas pequeñas */
+    }
+}

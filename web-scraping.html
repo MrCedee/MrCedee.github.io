@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoftBots for Web Scraping Financial Information - Marcos Cedenilla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <h1>Marcos Cedenilla</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Details Section -->
+    <section id="project-detail">
+        <div class="container">
+            <h2>SoftBots for Web Scraping Financial Information</h2>
+            <img src="images/web-scraping.webp" alt="SoftBots for Web Scraping Financial Information">
+            <p><strong>Published on September 3, 2024</strong></p>
+            <div class="project-description">
+                <!-- Detailed project description -->
+                <p>This project demonstrates the development of a simple web scraper using Python’s re and urllib libraries to gather financial information from Yahoo Finance. The scraper efficiently retrieves and parses web data, highlighting the power of automation in financial analysis.</p>
+
+                <!-- Additional sections as needed -->
+                <h3>Introduction</h3>
+                <p>Web scraping has become an essential tool for data enthusiasts, analysts, and developers who need to extract and analyze information from the web. In this project, I developed a web scraper using Python’s re and urllib libraries to gather financial information from Yahoo Finance. This example highlights the power and utility of web scraping in the financial domain, where up-to-date data is crucial for making informed decisions.</p>
+
+                <h3>Why Web Scraping for Financial Data?</h3>
+                <p>Financial data is a cornerstone of decision-making in investing, business analysis, and economic forecasting. While Yahoo Finance provides a user-friendly interface for accessing this data, manually searching and extracting information can be time-consuming. By automating the process through web scraping, we can efficiently gather the data we need and format it for further analysis. For example, the P/E ratio is key in stock analysis, so having a tool that gathers that information would be highly useful.</p>
+
+                <h3>Getting Started</h3>
+                <p>For this project, I used Python and two basic libraries:</p>
+                <ul>
+                    <li><strong>urllib:</strong> To handle URL requests and retrieve web page content.</li>
+                    <li><strong>re:</strong> To use regular expressions for parsing and extracting the necessary data.</li>
+                </ul>
+                <p>These libraries are part of Python’s standard library, so no additional installations are required, making the process lightweight and accessible for anyone with a basic understanding of Python.</p>
+
+                <h3>Step-by-Step Guide to Building the Web Scraper</h3>
+                <h4>1. Retrieving the Web Page</h4>
+                <p>The first step in web scraping is to retrieve the content of the web page you want to scrape. Using the urllib library, you can send a request to Yahoo Finance and obtain the HTML content of the page in string format.</p>
+
+                <h4>2. Parsing the HTML Content</h4>
+                <p>Once you have the HTML content, the next step is to parse it and extract the data you need. Since Yahoo Finance’s web pages are dynamic and contain a lot of HTML tags, we use regular expressions (re) to locate and extract specific data points.</p>
+
+                <h4>3. Testing</h4>
+                <p>We test the information correctness with the links defined earlier to ensure the scraper retrieves the expected data accurately.</p>
+
+                <h3>Applications of Web Scraping for Financial Data</h3>
+                <p>The data collected through this scraping method can be applied to various use cases, such as:</p>
+                <ul>
+                    <li><strong>Portfolio Tracking:</strong> Automatically updating your portfolio’s value by scraping live stock prices.</li>
+                    <li><strong>Market Analysis:</strong> Gathering financial data to analyze trends, compare companies, or build predictive models.</li>
+                    <li><strong>Research and Reporting:</strong> Quickly extracting the latest financial metrics for reports or presentations.</li>
+                </ul>
+
+                <h3>Ethical Considerations and Best Practices</h3>
+                <p>While web scraping is a powerful tool, it’s important to use it responsibly. Always check the terms of service of the website you are scraping, and make sure your script respects the site’s rate limits to avoid overloading their servers. Consider implementing error handling in your code to manage unexpected issues, such as changes in the HTML structure or connectivity problems.</p>
+
+                <h3>Conclusion</h3>
+                <p>Web scraping with Python’s re and urllib libraries provides a simple yet effective way to automate the retrieval of financial data from Yahoo Finance. By leveraging this technique, you can save time and ensure that your data is always up-to-date and ready for analysis. Whether you're tracking stocks, conducting financial research, or building analytical tools, web scraping opens up a world of possibilities.</p>
+                <p>If you’re interested in trying this out, feel free to use the examples provided in this project as a starting point.</p>
+            </div>
+            <!-- Project Links -->
+            <div class="project-links">
+                <a href="https://github.com/MrCedee/Financial-Scraping" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Related Articles Section -->
+            <h3>Related Articles</h3>
+            <div class="related-articles">
+                <!-- Article Card 1 -->
+                <div class="card article-card">
+                    <img src="images/web-scraping.webp" alt="[Article Title 1]">
+                    <h4>SoftBots for Web Scraping Financial Information</h4>
+                    <p>Published on September 3, 2024</p>
+                    <a href="https://medium.com/@marcoscedenillabonet/softbots-for-web-scraping-financial-information-7283afbe9851" target="_blank">Read on Medium</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="https://github.com/MrCedee" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marcos-cedenilla-bonet-0a99321b2/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://medium.com/@marcoscedenillabonet" target="_blank"><i class="fab fa-medium"></i></a>
+                <a href="mailto:marcoscedenillabonet@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2023 Marcos Cedenilla. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
