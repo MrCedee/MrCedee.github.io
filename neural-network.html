@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Building a Neural Network FrameWork from Scratch with Python - Marcos Cedenilla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <h1>Marcos Cedenilla</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Details Section -->
+    <section id="project-detail">
+        <div class="container">
+            <h2>Building a Neural Network FrameWork from Scratch with Python</h2>
+            <img src="images/neural-network.webp" alt="Building a Neural Network FrameWork from Scratch with Python">
+            <p><strong>Published on September 3, 2024</strong></p>
+            <div class="project-description">
+                <!-- Detailed project description -->
+                <p>This project involves creating a neural network Framework from scratch using NumPy and Matplotlib. The primary goal was to build a customizable and extendable Framework that allows users to train and test neural networks on a variety of datasets. The Framework implements key components like activation functions, forward and backward propagation algorithms, and model compilation and training processes.</p>
+
+                <!-- Additional sections as needed -->
+                <h3>Introduction</h3>
+                <p>Creating a neural network Framework from scratch is both a challenging and rewarding task. Through this project, I aimed to deepen my understanding of the inner workings of neural networks, going beyond the abstractions provided by popular libraries like TensorFlow and PyTorch. This Framework development journey highlights the challenges faced, key components of the implementation, and some example applications.</p>
+
+                <h3>Introduction to the Project</h3>
+                <p>The goal of this project was to create a fully functional neural network Framework using just NumPy and Matplotlib. By implementing everything from basic activation functions to forward and backpropagation algorithms, I aimed to build a customizable and extendable Framework for training and testing neural networks on a variety of datasets.</p>
+
+                <h3>Key Features of the Library</h3>
+                <ul>
+                    <li><strong>Custom Layer and Activation Functions:</strong> The library allows for the creation of layers with different activation functions like Sigmoid, ReLU, Tanh, and Linear. These functions are implemented with both their forward pass (function) and backward pass (derivative) to support backpropagation.</li>
+                    <li><strong>Model Compilation and Training:</strong> Once the network layers are defined, the model can be compiled with a specified learning rate. The training process supports metrics like accuracy and includes the ability to validate against separate validation data.</li>
+                    <li><strong>Backpropagation Implementation:</strong> The backpropagation algorithm adjusts the weights and biases of each layer based on the computed error, determining the network’s ability to learn from data following the stochastic gradient descent method.</li>
+                    <li><strong>Support for Various Datasets:</strong> The Framework can be tested with various datasets, including classification and regression problems, validating the correctness and performance of the implementation.</li>
+                </ul>
+
+                <h3>Breaking Down the Code</h3>
+                <p>The project consists of several key classes and functions, each responsible for different components of the neural network.</p>
+
+                <h4>Activation Functions</h4>
+                <p>The activation functions (Sigmoid, ReLU, Tanh, and Linear) were implemented to control the outputs of neurons. For example, the Sigmoid activation is used to squash outputs to a range between 0 and 1, which is particularly useful for binary classification problems.</p>
+
+                <h4>Layers and MLP Model</h4>
+                <p>The Layer class defines the structure of each layer, including the initialization of weights and biases. The MLP class handles the construction of the neural network by allowing users to add layers and compile the model. The MLP model serves as the foundational structure and user interface for defining the network’s topology. The model can then be compiled and trained using the MLP_compiled class, which supports the forward pass, backpropagation, and optimization using gradient descent.</p>
+
+                <h3>Training and Evaluation</h3>
+                <p>The training process involves feeding the data through the network, computing the loss, and updating the weights via backpropagation. This section of the code is crucial as it dictates how well the network will learn from the data.</p>
+
+                <h3>Testing the Framework with Datasets</h3>
+                <p>After building the Framework, I conducted several tests using well-known datasets as well as artificial ones. These tests allowed me to evaluate the library’s performance in real-world scenarios and fine-tune the implementation. Datasets tested include artificial points classification and the Iris dataset, demonstrating the Framework’s capability to model non-linear relationships and handle well-known datasets.</p>
+
+                <h3>Challenges and Learning Outcomes</h3>
+                <p>Developing this library from scratch presented several challenges, especially in areas like debugging backpropagation and ensuring numerical stability during training. Overcoming these challenges deepened my understanding of how neural networks work under the hood. A significant takeaway was the importance of efficient matrix operations, which are crucial for neural networks and can lead to substantial performance gains.</p>
+
+                <h3>Conclusion and Next Steps</h3>
+                <p>This project was a valuable learning experience, and I’m excited to continue refining and expanding the library. Future improvements could include adding support for more complex architectures (like CNNs or RNNs), implementing more advanced optimization techniques, and providing better visualization tools for model performance.</p>
+                <p>If you’re interested in neural networks and want to understand how they work at a low level, I encourage you to explore this project further. It’s a fantastic way to gain a deeper appreciation for the complexities of machine learning.</p>
+
+            </div>
+            <!-- Project Links -->
+            <div class="project-links">
+                <a href="https://github.com/MrCedee/NN-Framework" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Related Articles Section -->
+            <h3>Related Articles</h3>
+            <div class="related-articles">
+                <!-- Article Card 1 -->
+                <div class="card article-card">
+                    <img src="images/neural-network.webp" alt="Building a Neural Network FrameWork from Scratch with Python: A Detailed Overview">
+                    <h4>Building a Neural Network FrameWork from Scratch with Python: A Detailed Overview</h4>
+                    <p>Published on September 3, 2024</p>
+                    <a href="https://medium.com/@marcoscedenillabonet/building-a-neural-network-framework-from-scratch-with-python-a-detailed-overview-eaabda00aaee" target="_blank">Read on Medium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="https://github.com/MrCedee" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marcos-cedenilla-bonet-0a99321b2/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://medium.com/@marcoscedenillabonet" target="_blank"><i class="fab fa-medium"></i></a>
+                <a href="mailto:marcoscedenillabonet@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2023 Marcos Cedenilla. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
