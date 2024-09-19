@@ -279,7 +279,7 @@ footer p {
 .download-button {
     display: inline-block;
     margin-bottom: 20px;
-    color: #fff;
+    color: #fe0000;
     background-color: var(--accent-color); /* Rojo de tu paleta */
     padding: 10px 15px;
     border-radius: 5px;
