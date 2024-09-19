@@ -290,3 +290,43 @@ footer p {
 .download-button:hover {
     background-color: var(--secondary-color); /* Cambia a azul al pasar el cursor */
 }
+
+/* Horizontal Cards */
+.cards-horizontal {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.cards-horizontal .card {
+    flex: 0 0 auto;
+    width: 250px; /* Adjust the width as needed */
+    margin-bottom: 20px;
+}
+
+.cards-horizontal .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cards-horizontal .card h4 {
+    margin-top: 10px;
+    color: var(--secondary-color);
+}
+
+.cards-horizontal .card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background-color: var(--secondary-color);
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cards-horizontal .card a:hover {
+    background-color: var(--accent-color);
+}
