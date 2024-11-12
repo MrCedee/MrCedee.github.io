@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicting Stock Market Trends - Marcos Cedenilla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <h1>Marcos Cedenilla</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Details Section -->
+    <section id="project-detail">
+        <div class="container">
+            <h2>NOAA Web Analysis</h2>
+            <img src="images/stock-market-part1.webp" alt="NOAA Web Analysis">
+            <p><strong>Published on November 5, 2024</strong></p>
+            <div class="project-description">
+                <strong>Date:</strong> November 5, 2024</p>
+                <h3>Project Overview</h3>
+                <p>In an effort to enhance my skills in distributed deployment and web APIs, I embarked on a comprehensive project that simulates the requirements of a large-scale distributed system. The project involves developing a distributed ETL (Extract, Transform, Load) pipeline integrated with an efficient relational database and connected to an API for delivering data visualizations and weather predictions. The entire system is orchestrated using Kubernetes and Docker, leveraging technologies like PySpark, TimescaleDB, and FastAPI to handle over 30 GB of NOAA's climatic data.</p>
+                <h4>Objectives</h4>
+                <ul>
+                    <li><strong>Scalability:</strong> Design a system capable of handling increasing data volumes without performance degradation.</li>
+                    <li><strong>Efficiency:</strong> Optimize data processing times using distributed computing with Apache Spark.</li>
+                    <li><strong>Reliability:</strong> Ensure high availability and fault tolerance through Kubernetes orchestration.</li>
+                    <li><strong>Usability:</strong> Provide intuitive interfaces for data exploration and analysis via FastAPI.</li>
+                    <li><strong>Predictive Analytics:</strong> Incorporate machine learning models to forecast future trends based on historical data.</li>
+                </ul>
+                <h4>Architecture</h4>
+                <p>The project's architecture is meticulously crafted to emulate a distributed computing environment. The key components include:</p>
+                <ol>
+                    <li><strong>Data Source:</strong> NOAA's Global Historical Climatology Network-Daily (GHCN-Daily), comprising over 30 GB of daily climatic records.</li>
+                    <li><strong>ETL Pipeline:</strong> A Spark cluster deployed on Kubernetes processes the massive datasets efficiently using PySpark.</li>
+                    <li><strong>Data Storage:</strong> Transformed data is stored in TimescaleDB, an optimized relational database for time-series data, running within a Docker container.</li>
+                    <li><strong>API and Visualization:</strong> A FastAPI application provides interactive dashboards and visualizations for data exploration.</li>
+                    <li><strong>Predictive Analytics:</strong> An independent machine learning model container connects to TimescaleDB to perform daily predictions, with results accessible via the FastAPI API.</li>
+                    <li><strong>Orchestration and Monitoring:</strong> Kubernetes orchestrates all containers, managing deployment, scaling, and monitoring to ensure seamless operation.</li>
+                </ol>
+                <h4>Article Summaries</h4>
+                <h5>1. Project Overview and Objectives</h5>
+                <p>The initial article introduces the project's motivation, goals, and the importance of handling large-scale data efficiently. It outlines the architecture and emphasizes the integration of various technologies to achieve scalability, efficiency, reliability, and usability. The article sets the foundation by explaining the choice of tools like Docker for containerization and Kubernetes for orchestration, highlighting their roles in ensuring consistency, isolation, portability, automated deployment, scaling, and high availability.</p>
+                <h5>2. Kubernetes Architecture and Deployment</h5>
+                <p>The second article delves into the Kubernetes infrastructure that forms the backbone of the project. It covers the setup of namespaces, ConfigMaps, and Secrets to manage configurations and sensitive information securely. The article explains how Kubernetes orchestrates the deployment of various components, such as the Spark cluster, TimescaleDB, and FastAPI application. Key points include:</p>
+                <ul>
+                    <li><strong>Namespace Definition:</strong> Creating a dedicated namespace (<code>noaa-analytics</code>) to isolate project resources.</li>
+                    <li><strong>ConfigMaps and Secrets:</strong> Managing environment variables and sensitive data securely using Kubernetes ConfigMaps and Secrets.</li>
+                    <li><strong>Deployment Automation:</strong> Utilizing scripts to automate the application of configurations, ensuring consistent and error-free deployments.</li>
+                    <li><strong>Scalability and Integration:</strong> Leveraging Kubernetes to scale components independently and maintain high availability.</li>
+                </ul>
+                <h5>3. ETL Pipeline Implementation</h5>
+                <p>The third article focuses on the ETL pipeline, the core of the data processing workflow. It details how over 31 GB of raw climatic data from NOAA are transformed into structured information ready for predictive analytics and interactive visualizations. Key aspects include:</p>
+                <ul>
+                    <li><strong>Apache Spark Utilization:</strong> Using PySpark on a Spark cluster to handle massive datasets efficiently with distributed computing.</li>
+                    <li><strong>Custom ETL Functions:</strong> Developing a library of utility functions to standardize and modularize extraction, transformation, and loading operations.</li>
+                    <li><strong>Data Transformation Process:</strong> Parsing fixed-width text files, handling missing values, unpivoting data, formatting dates, and cleaning data for storage.</li>
+                    <li><strong>Integration with TimescaleDB:</strong> Loading transformed data into TimescaleDB, optimized for time-series data and geospatial queries via PostGIS extensions.</li>
+                    <li><strong>Docker and Kubernetes Configuration:</strong> Containerizing the ETL pipeline with Docker and orchestrating it with Kubernetes for scalability, reliability, and efficient resource management.</li>
+                    <li><strong>Benefits Highlighted:</strong> Emphasizing efficiency in data processing, scalability, code modularity, seamless database integration, geospatial data handling, and automation.</li>
+                </ul>
+                <h4>Conclusion and Future Work</h4>
+                <p>The project demonstrates the integration of multiple technologies to create a scalable, efficient, and reliable system for processing and analyzing large-scale climatic data. By combining Apache Spark, TimescaleDB, FastAPI, Docker, and Kubernetes, the project addresses key challenges in big data processing and provides a solid foundation for further enhancements.</p>
+                <p>Future work includes:</p>
+                <ul>
+                    <li><strong>Advanced Analytics:</strong> Incorporating sophisticated machine learning models for predictive analytics.</li>
+                    <li><strong>Real-Time Data Processing:</strong> Enhancing the ETL pipeline to handle streaming data for real-time analytics.</li>
+                    <li><strong>Security Enhancements:</strong> Implementing advanced security measures to protect data integrity and privacy.</li>
+                    <li><strong>User Management:</strong> Developing role-based access controls within the API application.</li>
+                    <li><strong>Monitoring and Logging:</strong> Integrating tools like Grafana for real-time system monitoring and visualization.</li>
+                </ul>
+            </div>
+            
+            <!-- Project Links -->
+            <div class="project-links">
+                <a href="https://github.com/MrCedee" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Related Articles Section -->
+            <h3>Related Articles</h3>
+            <div class="related-articles">
+                <!-- Article Card 4 -->
+                <div class="card article-card">
+                    <img src="images/kubernetes-part4.webp" alt="NOAA Web Analysis Part 4">
+                    <h3>Developing an ETL Pipeline for Massive NOAA Sensor Data: From Raw Files to Predictive Insights</h3>
+                    <p>Published on November 5, 2024</p>
+                    <p>This article outlines the ETL pipeline of a NOAA analytics project, detailing how over 31 GB of climatic data are processed using Apache Spark and Kubernetes. It explains how raw sensor data is transformed into structured data for predictive analytics and visualizations, emphasizing scalability, reliability, and the integration of spatial metadata for geospatial queries.</p>
+                    <a href="https://medium.com/@marcoscedenillabonet/developing-an-etl-pipeline-for-massive-noaa-sensor-data-from-raw-files-to-predictive-insights-1820a68e6d68" target="_blank">Read more</a>
+                </div>
+                <!-- Article Card 3 -->
+                <div class="card article-card">
+                    <img src="images/kubernetes-part3.webp" alt="NOAA Web Analysis Part 3">
+                    <h3>Optimizing Geospatial and Time-Series Queries with TimescaleDB and PostGIS</h3>
+                    <p>Published on November 5, 2024</p>
+                    <p>This article details the database architecture of a NOAA analytics project, focusing on using TimescaleDB and PostGIS on PostgreSQL to optimize geospatial and time-series queries. It covers Docker and Kubernetes configurations for deploying the database securely and efficiently within a cluster environment.</p>
+                    <a href="https://medium.com/@marcoscedenillabonet/optimizing-geospatial-and-time-series-queries-with-timescaledb-and-postgis-4978ea2ef8af" target="_blank">Read more</a>
+                </div>
+                <!-- Article Card 2 -->
+                <div class="card article-card">
+                    <img src="images/kubernetes-part2.webp" alt="NOAA Web Analysis Part 2">
+                    <h3>Architecture on Kubernetes: Building the Foundation of NOAA Analytics</h3>
+                    <p>Published on November 5, 2024</p>
+                    <p>This article details the Kubernetes architecture behind a NOAA analytics project, which simulates a distributed big data environment using Docker and Kubernetes locally. It covers setting up namespaces, ConfigMaps, Secrets, and deployment scripts to orchestrate a scalable and resilient ETL pipeline, data storage, and API-driven visualizations.</p>
+                    <a href="https://medium.com/@marcoscedenillabonet/architecture-on-kubernetes-building-the-foundation-of-noaa-analytics-6714c2d62e3f" target="_blank">Read more</a>
+                </div>
+                <!-- Article Card 1 -->
+                <div class="card article-card">
+                    <img src="images/kubernetes-part1.webp" alt="NOAA Web Analysis Part 1">
+                    <h3>My Biggest Data Science Project So Far: NOAA Web Analysis. Distributed ETL, Kubernetes, AI, SQL and FastAPI.</h3>
+                    <p>Published on October 3, 2024</p>
+                    <p>This article presents a project that builds a distributed ETL pipeline using Kubernetes and Docker to process over 30GB of NOAA weather data. It integrates PySpark for efficient data processing, TimescaleDB for optimized time-series storage, FastAPI for interactive visualizations, and incorporates machine learning models for predictions.</p>
+                    <a href="https://medium.com/@marcoscedenillabonet/my-biggest-data-science-project-so-far-noaa-web-analysis-525c87a17532" target="_blank">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="https://github.com/MrCedee" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marcos-cedenilla-bonet-0a99321b2/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://medium.com/@marcoscedenillabonet" target="_blank"><i class="fab fa-medium"></i></a>
+                <a href="mailto:marcoscedenillabonet@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2023 Marcos Cedenilla. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
